@@ -10,11 +10,9 @@ def index(request):
     return render(request, "index.html")
 
 def page2(request):
-
     return render(request, "page2.html")
 
 def page3(request):
-
     html = '''
     <html>
         <head><title>Página 3</title></head>
@@ -22,7 +20,7 @@ def page3(request):
             <h1>Python no Heroku - SOCPS</h1>
             <h2>Página 3</h2>
             <a href="../">index</a>
-            <a href="{% url 'page4' %}">pagina 4</a>
+            <a href="../page4">pagina 4</a>
         </body>
     </html>
     '''
@@ -38,10 +36,10 @@ def page5(request):
         <html>
             <head><title>Página 5</title></head>
             <body>
-                <h1>{date}</h1>
+                <h1>'''+dt_string+'''</h1>
             </body>
         </html>
-        <a href="{% url 'page2' %}">Página 2</a>
-        <a href="{% url 'page4' %}">Página 4</a>
-    '''.format(date=dt_string)
+        <a href="../page2">pagina 2</a>
+        <a href="../page4">pagina 4</a>
+    '''
     return HttpResponse(html)

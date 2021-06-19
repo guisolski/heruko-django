@@ -22,8 +22,8 @@ urlpatterns = [
 	path("", mysite.views.index, name="index"),
 	path("page2/", mysite.views.page2, name="page2"),
 	path("page3/", mysite.views.page3, name="page3"),
-    	path("page4/", mysite.views.page4, name="page4"),
-    	path("page5/", mysite.views.page5, name="page5"),
-    	path('admin/', admin.site.urls),
+    path("page4/", mysite.views.page4, name="page4"),
+    path("page5/", mysite.views.page5, name="page5"),
+    path('admin/', admin.site.urls),
 ]
 
