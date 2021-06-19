@@ -1,1 +1,1 @@
-# heruko-django-
+# Python - Heruko: SOCPS
